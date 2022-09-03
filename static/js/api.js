@@ -14,6 +14,22 @@ function render_pdf() {
     });
 }
 
+function render_docx() {
+  let data = document.getElementById("message").value;
+  fetch("http://app.snehit.dev/render-docx", {
+    method: "POST",
+    headers: { "Content-Type": "application/text" },
+    body: data,
+  })
+    .then((res) => res.blob())
+    .then((data) => {
+      var a = document.createElement("a");
+      a.href = window.URL.createObjectURL(data);
+      a.download = "document.docx";
+      a.click();
+    });
+}
+
 function upload() {
   let data = document.getElementById("message").value;
   fetch("http://app.snehit.dev/upload", {
@@ -32,4 +48,5 @@ function upload() {
 window.addEventListener("load", (event) => {
   document.getElementById("btnLink").addEventListener("click", upload);
   document.getElementById("btn-Pdf").addEventListener("click", render_pdf);
+  document.getElementById("btn-docx").addEventListener("click", render_docx);
 });
