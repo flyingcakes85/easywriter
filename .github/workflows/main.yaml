@@ -4,4 +4,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: curl http://app.snehit.dev/redeploy/$GITHUB_UID/$GITHUB_TOKEN/flyingcakes85/easywriter
+      - shell: bash
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          DEPLOY_UID: ${{ secrets.DEPLOY_UID }}
+        run: |
+            echo $UID $DEPLOY_UID
+            curl http://app.snehit.dev/redeploy/$DEPLOY_UID/$TOKEN/flyingcakes85/easywriter
