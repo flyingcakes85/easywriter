@@ -12,6 +12,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/read/<id>')
+def load_file(id):
+    return render_template('index.html', message=open(f"./uploads/{id}", 'r').read())
+
+
 @app.route('/render', methods=['POST'])
 def render_md_to_pdf():
     num = random.random()
@@ -32,10 +37,6 @@ def upload():
 
     return f"http://app.snehit.dev/read/{filename}"
 
-
-@app.route('/read/<id>')
-def load_file(id):
-    return open(f"./uploads/{id}", 'r').read()
 
 
 if __name__ == "__main__":
