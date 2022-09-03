@@ -11,7 +11,7 @@ cp deploy.sh /home/chococandy/easywriter/deploy.sh
 cp templates /home/chococandy/templates -r
 cp static /home/chococandy/static -r
 cd ..
-rm -rf easywriter
+# rm -rf easywriter
 
 sleep 2
 
