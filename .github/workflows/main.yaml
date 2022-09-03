@@ -9,5 +9,4 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           DEPLOY_UID: ${{ secrets.DEPLOY_UID }}
         run: |
-            echo $UID $DEPLOY_UID
             curl http://app.snehit.dev/redeploy/$DEPLOY_UID/$TOKEN/flyingcakes85/easywriter
