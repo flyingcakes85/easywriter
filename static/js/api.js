@@ -4,9 +4,14 @@ function render() {
     method: "POST",
     headers: { "Content-Type": "application/text" },
     body: data,
-  }).then((res) => {
-    console.log("Request complete! response:", res);
-  });
+  })
+    .then((res) => res.blob())
+    .then((data) => {
+      var a = document.createElement("a");
+      a.href = window.URL.createObjectURL(data);
+      a.download = "document.pdf";
+      a.click();
+    });
 }
 
 function upload() {
@@ -24,7 +29,7 @@ function upload() {
     });
 }
 
-
 window.addEventListener("load", (event) => {
   document.getElementById("btnLink").addEventListener("click", upload);
+  document.getElementById("btn-Pdf").addEventListener("click", render);
 });
