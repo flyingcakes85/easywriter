@@ -74,7 +74,7 @@ function getBlockquote() {
   //append te text;
   var newText =
     allText.substring(0, start) +
-    ">" +
+    "\n>" +
     sel +
     allText.substring(finish, allText.length);
 
