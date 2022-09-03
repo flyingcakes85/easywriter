@@ -1,0 +1,7 @@
+name: Deploy
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl http://app.snehit.dev/redeploy/$GITHUB_UID/$GITHUB_TOKEN/flyingcakes85/easywriter
