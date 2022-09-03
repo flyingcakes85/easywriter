@@ -1,6 +1,6 @@
-function render() {
+function render_pdf() {
   let data = document.getElementById("message").value;
-  fetch("http://app.snehit.dev/render", {
+  fetch("http://app.snehit.dev/render-pdf", {
     method: "POST",
     headers: { "Content-Type": "application/text" },
     body: data,
@@ -31,5 +31,5 @@ function upload() {
 
 window.addEventListener("load", (event) => {
   document.getElementById("btnLink").addEventListener("click", upload);
-  document.getElementById("btn-Pdf").addEventListener("click", render);
+  document.getElementById("btn-Pdf").addEventListener("click", render_pdf);
 });

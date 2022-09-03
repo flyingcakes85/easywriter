@@ -17,7 +17,7 @@ def load_file(id):
     return render_template('index.html', message=open(f"./uploads/{id}", 'r').read())
 
 
-@app.route('/render', methods=['POST'])
+@app.route('/render-pdf', methods=['POST'])
 def render_md_to_pdf():
     num = random.random()
     md_data = request.data.decode('ascii')
