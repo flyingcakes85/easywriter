@@ -28,6 +28,17 @@ def render_md_to_pdf():
     return send_from_directory('/', f"tmp/{num}.pdf")
 
 
+@app.route('/render-docx', methods=['POST'])
+def render_md_to_docx():
+    num = random.random()
+    md_data = request.data.decode('ascii')
+    with open(f"/tmp/{num}.md", 'w') as f:
+        f.write(md_data)
+
+    os.system(f"/usr/bin/pandoc -o /tmp/{num}.docx /tmp/{num}.md")
+    return send_from_directory('/', f"tmp/{num}.docx")
+
+
 @app.route('/upload', methods=['POST'])
 def upload():
     filename = ''.join(random.choices(
@@ -36,7 +47,6 @@ def upload():
         f.write(request.data.decode('ascii'))
 
     return f"http://app.snehit.dev/read/{filename}"
-
 
 
 if __name__ == "__main__":
