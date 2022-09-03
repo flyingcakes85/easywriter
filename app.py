@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 import string
+import subprocess
 import random
 import os
 from flask import Flask, send_from_directory, request, render_template
@@ -9,7 +10,7 @@ app = Flask(__name__, static_folder="static/")
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    return render_template('index.html', message=" ")
 
 
 @app.route('/read/<id>')
@@ -48,6 +49,13 @@ def upload():
 
     return f"http://app.snehit.dev/read/{filename}"
 
+@app.route('/redeploy/<uid>')
+def redeploy(uid):
+    if uid == open(f"../uid", 'r').read():
+        subprocess.Popen(["./deploy.sh"])
+        return "running deploy"
+
+    return "uid not matched"
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
