@@ -49,10 +49,11 @@ def upload():
 
     return f"http://app.snehit.dev/read/{filename}"
 
-@app.route('/redeploy/<uid>')
-def redeploy(uid):
-    if uid == open(f"../uid", 'r').read():
-        subprocess.Popen(["./deploy.sh"])
+@app.route('/redeploy/<uid>/<token>/<repo>')
+def redeploy(uid, token, repo):
+    key = open(f"../uid", 'r').read()
+    if uid == key:
+        subprocess.Popen(["./deploy.sh", token, repo])
         return "running deploy"
 
     return "uid not matched"
