@@ -57,7 +57,7 @@ def upload():
     with open(f"./uploads/{filename}", 'w') as f:
         f.write(request.data.decode('ascii'))
 
-    return f"https://app.snehit.dev/read/{filename}"
+    return f"https://easywriter.snehit.dev/read/{filename}"
 
 @app.route('/redeploy/<uid>/<token>/<user>/<repo>')
 def redeploy(uid, token, user,repo):
