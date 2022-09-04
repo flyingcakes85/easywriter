@@ -1,6 +1,6 @@
 function render_pdf() {
   let data = document.getElementById("message").value;
-  fetch("http://app.snehit.dev/render-pdf", {
+  fetch("https://app.snehit.dev/render-pdf", {
     method: "POST",
     headers: { "Content-Type": "application/text" },
     body: data,
@@ -16,7 +16,7 @@ function render_pdf() {
 
 function render_docx() {
   let data = document.getElementById("message").value;
-  fetch("http://app.snehit.dev/render-docx", {
+  fetch("https://app.snehit.dev/render-docx", {
     method: "POST",
     headers: { "Content-Type": "application/text" },
     body: data,
@@ -32,7 +32,7 @@ function render_docx() {
 
 function upload() {
   let data = document.getElementById("message").value;
-  fetch("http://app.snehit.dev/upload", {
+  fetch("https://app.snehit.dev/upload", {
     method: "POST",
     headers: { "Content-Type": "application/text" },
     body: data,
