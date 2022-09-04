@@ -66,6 +66,6 @@ function upload() {
 
 window.addEventListener("load", (event) => {
   document.getElementById("btnLink").addEventListener("click", upload);
-  document.getElementById("btn-Pdf").addEventListener("click", render);
+  document.getElementById("btn-Pdf").addEventListener("click", render_pdf);
   document.getElementById("btn-docx").addEventListener("click", render_docx);
 });
