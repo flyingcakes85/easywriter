@@ -3,7 +3,7 @@ on: [push]
 jobs:
   Deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - shell: bash
         env:
