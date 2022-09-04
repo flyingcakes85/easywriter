@@ -5,6 +5,13 @@
 
 ![Cover](https://cdn.discordapp.com/attachments/883728533430599702/1015936040701280306/unknown.png)
 
+### Editor
+
+![Editor](https://cdn.discordapp.com/attachments/883728533430599702/1015936585134522368/unknown.png)
+
+### Output
+
+![Output](https://cdn.discordapp.com/attachments/883728533430599702/1015936820678242344/unknown.png)
 
 ## User Guide
 
