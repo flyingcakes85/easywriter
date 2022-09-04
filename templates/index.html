@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
 
-
+    <style>
+        .selected::after {
+            content: " ✓";
+        }
+    </style>
 
 </head>
 
@@ -82,8 +86,8 @@
             <li class="dropdown">
               <a class="bg-gray-00 hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Style ></a>
                 <ul class="dropdown-content absolute hidden text-gray-700 pl-5 ml-24 -mt-10">
-                  <li><a class="bg-gray-200 hover:bg-gray-100 py-2 px-6 block whitespace-no-wrap " href="#">Serif</a>
-                    <li><a class="bg-gray-200 hover:bg-gray-100 py-2 px-6 block whitespace-no-wrap" href="#">Sans_Serif</a>
+                  <li><a class="bg-gray-200 hover:bg-gray-100 py-2 px-6 block whitespace-no-wrap selected" href="#" id="serif">Serif</a>
+                    <li><a class="bg-gray-200 hover:bg-gray-100 py-2 px-6 block whitespace-no-wrap" href="#" id="sans-serif">Sans Serif</a>
                 </ul>
             </li>
             <style>
