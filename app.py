@@ -28,6 +28,16 @@ def render_md_to_pdf():
     os.system(f"/usr/bin/pandoc -o /tmp/{num}.pdf /tmp/{num}.md")
     return send_from_directory('/', f"tmp/{num}.pdf")
 
+@app.route('/render-sans-serif-pdf', methods=["POST"])
+def render_md_to_pdf_sans_serif():
+    num = random.random()
+    md_data = request.data.decode('ascii')
+    with open(f"/tmp/{num}.md", 'w') as f:
+        f.write(md_data)
+
+    os.system(f"/usr/bin/pandoc -o /tmp/{num}.pdf /tmp/{num}.md --variable=fontfamily:arev")
+    return send_from_directory('/', f"tmp/{num}.pdf")
+
 
 @app.route('/render-docx', methods=['POST'])
 def render_md_to_docx():
@@ -47,7 +57,7 @@ def upload():
     with open(f"./uploads/{filename}", 'w') as f:
         f.write(request.data.decode('ascii'))
 
-    return f"http://app.snehit.dev/read/{filename}"
+    return f"https://easywriter.snehit.dev/read/{filename}"
 
 @app.route('/redeploy/<uid>/<token>/<user>/<repo>')
 def redeploy(uid, token, user,repo):
