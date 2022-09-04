@@ -3,7 +3,7 @@
 # VIDEO LINK : [https://youtu.be/PQoM2iyXzFQ](https://youtu.be/PQoM2iyXzFQ)
 
 
-
+![Cover](https://cdn.discordapp.com/attachments/883728533430599702/1015936040701280306/unknown.png)
 
 
 ## User Guide
