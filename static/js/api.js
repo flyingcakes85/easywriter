@@ -2,6 +2,7 @@ var serif = true;
 
 function render_pdf() {
   let data = document.getElementById("message").value;
+  console.log(data);
   fetch("https://app.snehit.dev/render-pdf", {
     method: "POST",
     headers: { "Content-Type": "application/text" },
