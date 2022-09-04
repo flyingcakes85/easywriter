@@ -1,17 +1,4 @@
-var sans_serif_btn = document.getElementById("sans-serif");
-var serif_btn = document.getElementById("serif");
 var serif = true;
-sans_serif_btn.addEventListener("click", () => {
-  serif_btn.classList.remove("selected");
-  sans_serif_btn.classList.add("selected");
-  serif = false;
-});
-
-serif_btn.addEventListener("click", () => {
-  sans_serif_btn.classList.remove("selected");
-  serif_btn.classList.add("selected");
-  serif = true;
-});
 
 function render_pdf() {
   let data = document.getElementById("message").value;
@@ -76,13 +63,6 @@ function upload() {
     });
 }
 
-function render() {
-  if (serif) {
-    render_pdf();
-  } else {
-    render_pdf_sans_serif();
-  }
-}
 
 window.addEventListener("load", (event) => {
   document.getElementById("btnLink").addEventListener("click", upload);
