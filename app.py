@@ -12,6 +12,9 @@ app = Flask(__name__, static_folder="static/")
 def index():
     return render_template('index.html', message=" ")
 
+@app.route('/userguide', methods=['GET'])
+def userguide():
+    return render_template('userguide.html')
 
 @app.route('/read/<id>')
 def load_file(id):
