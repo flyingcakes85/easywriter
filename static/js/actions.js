@@ -293,5 +293,5 @@ saveBtn.addEventListener("click", () => {
 //to erase the text--> new file
 function eraseText() {
   document.getElementById("message").value = "";
-  window.location.href = "http://easywriter.snehit.dev";
+  window.location.href = "http://app.snehit.dev";
 }
