@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
+      - name: Python Syntax Checker
+        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
       - shell: bash
         env:
           TOKEN: ${{ secrets.TOKEN }}
