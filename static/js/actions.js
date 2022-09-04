@@ -74,7 +74,7 @@ function getBlockquote() {
   //append te text;
   var newText =
     allText.substring(0, start) +
-    "\n>" +
+    "\n\n>" +
     sel +
     allText.substring(finish, allText.length);
 
@@ -133,7 +133,7 @@ function getHeading1() {
   //append te text;
   var newText =
     allText.substring(0, start) +
-    "\n# " +
+    "\n\n# " +
     sel +
     allText.substring(finish, allText.length);
 
@@ -160,7 +160,7 @@ function getHeading2() {
   //append te text;
   var newText =
     allText.substring(0, start) +
-    "\n## " +
+    "\n\n## " +
     sel +
     allText.substring(finish, allText.length);
 
@@ -187,7 +187,7 @@ function getHeading3() {
   //append te text;
   var newText =
     allText.substring(0, start) +
-    "\n### " +
+    "\n\n### " +
     sel +
     allText.substring(finish, allText.length);
 
@@ -214,7 +214,7 @@ function getHeading4() {
   //append te text;
   var newText =
     allText.substring(0, start) +
-    "\n#### " +
+    "\n\n#### " +
     sel +
     allText.substring(finish, allText.length);
 
@@ -241,7 +241,7 @@ function getHeading5() {
   //append te text;
   var newText =
     allText.substring(0, start) +
-    "\n##### " +
+    "\n\n##### " +
     sel +
     allText.substring(finish, allText.length);
 
@@ -268,7 +268,7 @@ function getHeading6() {
   //append te text;
   var newText =
     allText.substring(0, start) +
-    "\n###### " +
+    "\n\n###### " +
     sel +
     allText.substring(finish, allText.length);
 
