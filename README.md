@@ -2,6 +2,12 @@
 
 # VIDEO LINK : [https://youtu.be/PQoM2iyXzFQ](https://youtu.be/PQoM2iyXzFQ)
 
+### Share Your Docs Easily!
+
+You can type out your documents and use the SHARE feature to get unique link to your document. You can share the unique link with collaborators so that they too can see your document.
+
+![share](https://cdn.discordapp.com/attachments/883728533430599702/1015937498603589652/unknown.png)
+
 
 ![Cover](https://cdn.discordapp.com/attachments/883728533430599702/1015936040701280306/unknown.png)
 
